@@ -61,16 +61,19 @@ class Mail {
     public function setSubject($subject)
     {
         $this->subject = $subject;
+        return $this;
     }
 
     public function setMessage($message)
     {
         $this->message = $message;
+        return $this;
     }
 
     public function setHeaders($headers)
     {
         $this->headers = $headers;
+        return $this;
     }
 
     public function setTo($to)
@@ -78,6 +81,7 @@ class Mail {
         unset($this->to);
         $this->to = [];
         $this->to[] = $to;
+        return $this;
     }
 
     public function getTo()
